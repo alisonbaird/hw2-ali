@@ -1,0 +1,2 @@
+class TheCast < ApplicationRecord
+end

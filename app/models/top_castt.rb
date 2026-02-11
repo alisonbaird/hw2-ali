@@ -1,0 +1,2 @@
+class TopCastt < ApplicationRecord
+end
