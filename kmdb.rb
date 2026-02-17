@@ -84,7 +84,32 @@
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
-# TODO!
+
+studio = Studio.new
+studio["name"] = "Warner Brothers"
+studio.save
+p studio["id"]
+
+
+movie = Movie.new
+movie["title"] = "Batman Begins"
+movie["mpaa_rating"] = "PG-13"
+movie["year_released"] = "2005"
+movie["studio_id"] = studio["id"]
+
+movie.save
+p movie
+
+movie = Movie.new
+movie["title"] = "Batman Begins"
+movie["mpaa_rating"] = "PG-13"
+movie["year_released"] = "2005"
+movie["studio_id"] = studio["id"]
+
+movie.save
+p movie
+
+
 
 # Prints a header for the movies output
 puts "Movies"
