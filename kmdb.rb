@@ -87,10 +87,10 @@
 
 studio = Studio.new
 studio["name"] = "Warner Brothers"
+
 studio.save
 p studio["id"]
 
-
 movie = Movie.new
 movie["title"] = "Batman Begins"
 movie["mpaa_rating"] = "PG-13"
@@ -101,14 +101,254 @@ movie.save
 p movie
 
 movie = Movie.new
-movie["title"] = "Batman Begins"
+movie["title"] = "The Dark Knight"
 movie["mpaa_rating"] = "PG-13"
-movie["year_released"] = "2005"
+movie["year_released"] = "2008"
 movie["studio_id"] = studio["id"]
 
 movie.save
 p movie
 
+movie = Movie.new
+movie["title"] = "The Dark Knight Rises"
+movie["mpaa_rating"] = "PG-13"
+movie["year_released"] = "2012"
+movie["studio_id"] = studio["id"]
+
+movie.save
+p movie
+
+agent = Agent.new
+agent["name"] = "Patrick Whitesell"
+
+agent.save
+p agent
+
+actor = Actor.new
+actor["actor_name"] = "Christian Bale"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Michael Caine"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Liam Neeson"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Katie Holmes"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Gary Oldman"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Christian Bale"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Heath Ledger"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Aaron Eckhart"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Michael Caine"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Maggie Gyllenhaal"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Christian Bale"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Gary Oldman"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Tom Hardy"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Joseph Gordon-Levitt"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+actor = Actor.new
+actor["actor_name"] = "Anne Hathaway"
+actor["agent_id"] = agent["id"]
+
+actor.save
+p actor
+
+cast = Cast.new
+cast["character_name"] = "Bruce Wayne"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Alfred"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Ra's Al Ghul"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Rachel Dawes"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Commissioner Gordon"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Bruce Wayne"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Joker"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Harvey Dent"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Alfred"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Rachel Dawes"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Bruce Wayne"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Commissioner Gordon"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+
+cast = Cast.new
+cast["character_name"] = "Bane"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "John Blake"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
+
+cast = Cast.new
+cast["character_name"] = "Selina Kyle"
+cast["actor_id"] = actor["id"]
+cast["movie_id"] = movie["id"]
+
+cast.save
+p cast
 
 
 # Prints a header for the movies output
