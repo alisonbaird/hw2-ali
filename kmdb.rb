@@ -352,6 +352,9 @@ puts "Top Cast"
 puts "========"
 puts ""
 
+
+
+
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
@@ -363,3 +366,8 @@ puts ""
 
 # Query the actor data and loop through the results to display the agent's list of represented actors output.
 # TODO!
+agent = Agent.find_by({ "agent_name" => "Patrick Whitesell" })
+actors = Actor.where({ "agent_id" => agent["id"] })
+for actor in actors
+  puts actor["actor_name"]
+end
