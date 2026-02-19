@@ -330,13 +330,21 @@ p cast
 puts "Movies"
 puts "======"
 puts ""
+p studio_1["id"]
+movies = Movie.where({"studio_id" => studio_1["id"]})
+p movies
 
-movie = Movie.find_by({"studio_id" => "studio_1"})
-p movie
+
+
 
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+movies = Movie.where({"studio_id" => studio_1["id"]})
+puts "Movies at Warner Brothers: #{movies.count}"
+for movie in movies
+  puts "#{movie["title"]} #{movie["year_released"]} #{movie["mpaa_rating"]}"
+end
 
 # Prints a header for the cast output
 puts ""
