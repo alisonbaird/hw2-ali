@@ -85,17 +85,17 @@
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 
-studio = Studio.new
-studio["name"] = "Warner Brothers"
+studio_1 = Studio.new
+studio_1["name"] = "Warner Brothers"
 
-studio.save
-p studio["id"]
+studio_1.save
+p studio_1["id"]
 
 movie_1 = Movie.new
 movie_1["title"] = "Batman Begins"
 movie_1["mpaa_rating"] = "PG-13"
 movie_1["year_released"] = "2005"
-movie_1["studio_id"] = studio["id"]
+movie_1["studio_id"] = studio_1["id"]
 
 movie_1.save
 p movie_1
@@ -104,7 +104,7 @@ movie_2 = Movie.new
 movie_2["title"] = "The Dark Knight"
 movie_2["mpaa_rating"] = "PG-13"
 movie_2["year_released"] = "2008"
-movie_2["studio_id"] = studio["id"]
+movie_2["studio_id"] = studio_1["id"]
 
 movie_2.save
 p movie_2
@@ -113,7 +113,7 @@ movie_3 = Movie.new
 movie_3["title"] = "The Dark Knight Rises"
 movie_3["mpaa_rating"] = "PG-13"
 movie_3["year_released"] = "2012"
-movie_3["studio_id"] = studio["id"]
+movie_3["studio_id"] = studio_1["id"]
 
 movie_3.save
 p movie_3
@@ -330,6 +330,10 @@ p cast
 puts "Movies"
 puts "======"
 puts ""
+
+movie = Movie.find_by({"studio_id" => "studio_1"})
+p movie
+
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
