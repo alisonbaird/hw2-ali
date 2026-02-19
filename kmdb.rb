@@ -91,32 +91,32 @@ studio["name"] = "Warner Brothers"
 studio.save
 p studio["id"]
 
-movie = Movie.new
-movie["title"] = "Batman Begins"
-movie["mpaa_rating"] = "PG-13"
-movie["year_released"] = "2005"
-movie["studio_id"] = studio["id"]
+movie_1 = Movie.new
+movie_1["title"] = "Batman Begins"
+movie_1["mpaa_rating"] = "PG-13"
+movie_1["year_released"] = "2005"
+movie_1["studio_id"] = studio["id"]
 
-movie.save
-p movie
+movie_1.save
+p movie_1
 
-movie = Movie.new
-movie["title"] = "The Dark Knight"
-movie["mpaa_rating"] = "PG-13"
-movie["year_released"] = "2008"
-movie["studio_id"] = studio["id"]
+movie_2 = Movie.new
+movie_2["title"] = "The Dark Knight"
+movie_2["mpaa_rating"] = "PG-13"
+movie_2["year_released"] = "2008"
+movie_2["studio_id"] = studio["id"]
 
-movie.save
-p movie
+movie_2.save
+p movie_2
 
-movie = Movie.new
-movie["title"] = "The Dark Knight Rises"
-movie["mpaa_rating"] = "PG-13"
-movie["year_released"] = "2012"
-movie["studio_id"] = studio["id"]
+movie_3 = Movie.new
+movie_3["title"] = "The Dark Knight Rises"
+movie_3["mpaa_rating"] = "PG-13"
+movie_3["year_released"] = "2012"
+movie_3["studio_id"] = studio["id"]
 
-movie.save
-p movie
+movie_3.save
+p movie_3
 
 agent = Agent.new
 agent["name"] = "Patrick Whitesell"
@@ -131,71 +131,71 @@ actor_CB["actor_name"] = "Christian Bale"
 actor_CB.save
 p actor_CB
 
-actor = Actor.new
-actor["actor_name"] = "Michael Caine"
+actor_MC = Actor.new
+actor_MC["actor_name"] = "Michael Caine"
 
 
-actor.save
-p actor
+actor_MC.save
+p actor_MC
 
-actor = Actor.new
-actor["actor_name"] = "Liam Neeson"
-
-
-actor.save
-p actor
-
-actor = Actor.new
-actor["actor_name"] = "Katie Holmes"
+actor_LN = Actor.new
+actor_LN["actor_name"] = "Liam Neeson"
 
 
-actor.save
-p actor
+actor_LN.save
+p actor_LN
 
-actor = Actor.new
-actor["actor_name"] = "Gary Oldman"
-
-
-actor.save
-p actor
+actor_KH = Actor.new
+actor_KH["actor_name"] = "Katie Holmes"
 
 
-actor = Actor.new
-actor["actor_name"] = "Heath Ledger"
+actor_KH.save
+p actor_KH
+
+actor_GO = Actor.new
+actor_GO["actor_name"] = "Gary Oldman"
 
 
-actor.save
-p actor
-
-actor = Actor.new
-actor["actor_name"] = "Aaron Eckhart"
+actor_GO.save
+p actor_GO
 
 
-actor.save
-p actor
+actor_HL = Actor.new
+actor_HL["actor_name"] = "Heath Ledger"
 
 
-actor = Actor.new
-actor["actor_name"] = "Maggie Gyllenhaal"
+actor_HL.save
+p actor_HL
+
+actor_AE = Actor.new
+actor_AE["actor_name"] = "Aaron Eckhart"
 
 
-actor.save
-p actor
+actor_AE.save
+p actor_AE
 
 
-actor = Actor.new
-actor["actor_name"] = "Tom Hardy"
+actor_MG = Actor.new
+actor_MG["actor_name"] = "Maggie Gyllenhaal"
 
 
-actor.save
-p actor
-
-actor = Actor.new
-actor["actor_name"] = "Joseph Gordon-Levitt"
+actor_MG.save
+p actor_MG
 
 
-actor.save
-p actor
+actor_TH = Actor.new
+actor_TH["actor_name"] = "Tom Hardy"
+
+
+actor_TH.save
+p actor_TH
+
+actor_JGL = Actor.new
+actor_JGL["actor_name"] = "Joseph Gordon-Levitt"
+
+
+actor_JGL.save
+p actor_JGL
 
 actor_AH = Actor.new
 actor_AH["actor_name"] = "Anne Hathaway"
@@ -206,80 +206,40 @@ p actor_AH
 
 cast = TheCast.new
 cast["character_name"] = "Bruce Wayne"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
+cast["actor_id"] = actor_CB["id"]
+cast["movie_id"] = movie_1["id"]
 
 cast.save
 p cast
 
 cast = TheCast.new
 cast["character_name"] = "Alfred"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
+cast["actor_id"] = actor_MC["id"]
+cast["movie_id"] = movie_1["id"]
 
 cast.save
 p cast
 
 cast = TheCast.new
 cast["character_name"] = "Ra's Al Ghul"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
+cast["actor_id"] = actor_LN["id"]
+cast["movie_id"] = movie_1["id"]
 
 cast.save
 p cast
 
 cast = TheCast.new
 cast["character_name"] = "Rachel Dawes"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
+cast["actor_id"] = actor_MG["id"]
+cast["movie_id"] = movie_1["id"]
 
 cast.save
 p cast
 
 cast = TheCast.new
 cast["character_name"] = "Commissioner Gordon"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
-
-cast.save
-p cast
-
-cast = TheCast.new
-cast["character_name"] = "Bruce Wayne"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
-
-cast.save
-p cast
-
-cast = TheCast.new
-cast["character_name"] = "Joker"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
-
-cast.save
-p cast
-
-cast = TheCast.new
-cast["character_name"] = "Harvey Dent"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
-
-cast.save
-p cast
-
-cast = TheCast.new
-cast["character_name"] = "Alfred"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
-
-cast.save
-p cast
-
-cast = TheCast.new
-cast["character_name"] = "Rachel Dawes"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
+cast["actor_id"] = actor_GO["id"]
+cast["movie_id"] = movie_1["id"]
 
 cast.save
 p cast
@@ -287,15 +247,55 @@ p cast
 cast = TheCast.new
 cast["character_name"] = "Bruce Wayne"
 cast["actor_id"] = actor_CB["id"]
-cast["movie_id"] = movie["id"]
+cast["movie_id"] = movie_2["id"]
+
+cast.save
+p cast
+
+cast = TheCast.new
+cast["character_name"] = "Joker"
+cast["actor_id"] = actor_AE["id"]
+cast["movie_id"] = movie_2["id"]
+
+cast.save
+p cast
+
+cast = TheCast.new
+cast["character_name"] = "Harvey Dent"
+cast["actor_id"] = actor_AE["id"]
+cast["movie_id"] = movie_2["id"]
+
+cast.save
+p cast
+
+cast = TheCast.new
+cast["character_name"] = "Alfred"
+cast["actor_id"] = actor_MC["id"]
+cast["movie_id"] = movie_2["id"]
+
+cast.save
+p cast
+
+cast = TheCast.new
+cast["character_name"] = "Rachel Dawes"
+cast["actor_id"] = actor_KH["id"]
+cast["movie_id"] = movie_2["id"]
+
+cast.save
+p cast
+
+cast = TheCast.new
+cast["character_name"] = "Bruce Wayne"
+cast["actor_id"] = actor_CB["id"]
+cast["movie_id"] = movie_3["id"]
 
 cast.save
 p cast
 
 cast = TheCast.new
 cast["character_name"] = "Commissioner Gordon"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
+cast["actor_id"] = actor_GO["id"]
+cast["movie_id"] = movie_3["id"]
 
 cast.save
 p cast
@@ -303,16 +303,16 @@ p cast
 
 cast = TheCast.new
 cast["character_name"] = "Bane"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
+cast["actor_id"] = actor_TH["id"]
+cast["movie_id"] = movie_3["id"]
 
 cast.save
 p cast
 
 cast = TheCast.new
 cast["character_name"] = "John Blake"
-cast["actor_id"] = actor["id"]
-cast["movie_id"] = movie["id"]
+cast["actor_id"] = actor_JGL["id"]
+cast["movie_id"] = movie_3["id"]
 
 cast.save
 p cast
@@ -320,7 +320,7 @@ p cast
 cast = TheCast.new
 cast["character_name"] = "Selina Kyle"
 cast["actor_id"] = actor_AH["id"]
-cast["movie_id"] = movie["id"]
+cast["movie_id"] = movie_3["id"]
 
 cast.save
 p cast
